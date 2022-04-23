@@ -2,7 +2,7 @@ import time
 import numpy as np
 import cv2
 from playwright.sync_api import Playwright, sync_playwright, expect
-from main import mouse_action, image_action, mark_edge
+
 import pyautogui
 
 
@@ -16,7 +16,7 @@ def mark_edge(image_path: str):
     cv2.imshow('mask', mask)
 
     ret, binary = cv2.threshold(mask, 253, 255, cv2.THRESH_BINARY)
-
+    print(ret)
     contours, hierarchy = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     cv2.drawContours(p, contours, -1, (0, 0, 255), 3)
