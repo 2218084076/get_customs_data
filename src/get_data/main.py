@@ -22,7 +22,7 @@ def read_csv(file_path: str) -> list:
     :param: csv file path
     :return: id list
     """
-    logging.debug('read csv file%s:%', file_path)
+    logging.debug('read csv file%s:' % file_path)
     data = pd.read_csv(file_path, usecols=[0], encoding='gbk')
     id_list = []
     for n in data.values.tolist():
@@ -48,6 +48,7 @@ def browser_action(file_path: str, year: str, start_month: str, end_month: str) 
     pyautogui.hotkey('win', 'up')
     page.wait_for_timeout(1000)
     for key in read_csv(file_path):
+        logging.debug('find %s' % key)
         page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").select_option(year)
         page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").click()
         page.wait_for_timeout(100)
@@ -86,7 +87,7 @@ def browser_action(file_path: str, year: str, start_month: str, end_month: str) 
         page.wait_for_timeout(2000)
         for i in range(3):
             page.screenshot(path='page.png', full_page=True)
-            logging.debug('-screenshot page-')
+            page.wait_for_timeout(2000)
             crop_image('page.png')
             time.sleep(0.5)
             mouse_action(mark_edge('1.jpg'))
@@ -96,7 +97,7 @@ def browser_action(file_path: str, year: str, start_month: str, end_month: str) 
         page.frame_locator("iframe").nth(1).frame_locator("iframe[name=\"layui-layer-iframe2\"]").locator(
             "text=确定").click()
         page.wait_for_timeout(200)
-
+        download(page)
         page.frame_locator("iframe").nth(1).locator("text=返回设置").click()
         page.wait_for_timeout(500)
         page.close()
@@ -113,7 +114,7 @@ def mouse_action(x: int):
     pyautogui.moveTo(919, 675)
     pyautogui.click(919, 675)
     time.sleep(random.uniform(1, 2))
-    pyautogui.dragTo(970 + x, 675, duration=random.uniform(1, 2))
+    pyautogui.dragTo(970 + x, 675, duration=random.uniform(0, 1))
     time.sleep(random.uniform(1, 2))
 
 
@@ -155,15 +156,17 @@ def crop_image(image_path: str):
         logging.debug('Saved!')
 
 
-# def download():
-#     """
-#     click to download
-#     """
-#     page.frame_locator("iframe").nth(1).locator("a:has-text(\"导出数据\")").click()
-#     # Click text=确定
-#     with page.expect_download() as download_info:
-#         page.frame_locator("iframe").nth(1).locator("text=确定").click()
-#     download = download_info.value
+def download(page):
+    """
+    click to download
+    """
+    page.frame_locator("iframe").nth(1).locator("a:has-text(\"导出数据\")").click()
+    # Click text=确定
+    with page.expect_download() as download_info:
+        page.frame_locator("iframe").nth(1).locator("text=确定").click()
+    download_ = download_info.value
+    print(download_)
+
 
 # 830 712 1010712
 # mark_edge('1.jpg')
