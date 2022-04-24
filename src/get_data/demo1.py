@@ -7,6 +7,8 @@ import pyautogui
 
 
 def mark_edge(image_path: str):
+    e_max = 0
+    max_contours=[]
     p = cv2.imread(image_path)
     cv2.imshow('p', p)
     hsv = cv2.cvtColor(p, cv2.COLOR_BGR2HSV)
@@ -14,92 +16,102 @@ def mark_edge(image_path: str):
     high_hsv = np.array([180, 30, 255])
     mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
     cv2.imshow('mask', mask)
-
     ret, binary = cv2.threshold(mask, 253, 255, cv2.THRESH_BINARY)
-    print(ret)
     contours, hierarchy = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-    cv2.drawContours(p, contours, -1, (0, 0, 255), 3)
+    cv2.drawContours(p, contours, 2, (0, 0, 255), 3)
     cv2.imshow("img", p)
-
+    for i in contours:
+        if len(i) > e_max:
+            e_max = len(i)
+            max_contours = i.tolist()
+    # print(e_max, max_list)
+    print(max_contours[0],max_contours[0][0],max_contours[0][0][0])
+    print(type(max_contours))
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
 
-def run(playwright: Playwright, key: str) -> None:
-    browser = playwright.webkit.launch(headless=False)
-    context = browser.new_context()
+# def run(playwright: Playwright, key: str) -> None:
+#     browser = playwright.webkit.launch(headless=False)
+#     context = browser.new_context()
+#
+#     # Open new page
+#     page = context.new_page()
+#
+#     # Go to http://43.248.49.97/
+#     page.goto("http://43.248.49.97/")
+#     time.sleep(1)
+#     pyautogui.hotkey('win', 'up')
+#     # 0× click
+#     page.locator("html").click()
+#     page.wait_for_timeout(1000)
+#     # Select 3
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").select_option("2021")
+#     page.wait_for_timeout(200)
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").click()
+#     page.wait_for_timeout(200)
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"startMonth\"]").select_option("1")
+#     page.wait_for_timeout(200)
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"startMonth\"]").click()
+#     page.wait_for_timeout(200)
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").select_option("3")
+#     page.wait_for_timeout(200)
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").click()
+#     page.wait_for_timeout(200)
+#     # Select CODE_TS
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"outerField1\"]").select_option("CODE_TS")
+#     page.wait_for_timeout(200)
+#     # Click input[name="outerValue1"]
+#     page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").click()
+#     page.wait_for_timeout(200)
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"outerField2\"]").select_option("ORIGIN_COUNTRY")
+#     page.wait_for_timeout(200)
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"outerField2\"]").click()
+#     # Select TRADE_MODE
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"outerField3\"]").select_option("TRADE_MODE")
+#     page.wait_for_timeout(200)
+#     # Select TRADE_CO_PORT
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"outerField3\"]").click()
+#     page.wait_for_timeout(200)
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"outerField4\"]").select_option("TRADE_CO_PORT")
+#     # Fill input[name="outerValue1"]
+#     page.wait_for_timeout(200)
+#     page.frame_locator("iframe").nth(1).locator("select[name=\"outerField4\"]").click()
+#     page.wait_for_timeout(200)
+#     page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").fill(f"{key}")
+#     page.wait_for_timeout(300)
+#     # Click text=查询
+#     page.frame_locator("iframe").nth(1).locator("text=查询").click()
+#     page.wait_for_timeout(300)
+#     # Click text=确定
+#     page.frame_locator("iframe").nth(1).locator("text=确定").click()
+#     page.wait_for_timeout(2000)
+#     page.screenshot(path='page.png', full_page=True)
+#     print('=== screenshot page ==')
+#     # image_action('page.png')
+#     time.sleep(1)
+#     # mouse_action(mark_edge('1.jpg'))
+#     # Close page
+#     page.wait_for_timeout(300)
+#     page.frame_locator("iframe").first.frame_locator("iframe[name=\"layui-layer-iframe2\"]").locator(
+#         "text=确定").click()
+#
+#     page.wait_for_timeout(500)
+#     page.close()
+#
+#     # ---------------------
+#     context.close()
+#     browser.close()
 
-    # Open new page
-    page = context.new_page()
+'''playwright = sync_playwright().start()
 
-    # Go to http://43.248.49.97/
-    page.goto("http://43.248.49.97/")
-    time.sleep(1)
-    pyautogui.hotkey('win', 'up')
-    # 0× click
-    page.locator("html").click()
-    page.wait_for_timeout(1000)
-    # Select 3
-    page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").select_option("2021")
-    page.wait_for_timeout(200)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").click()
-    page.wait_for_timeout(200)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"startMonth\"]").select_option("1")
-    page.wait_for_timeout(200)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"startMonth\"]").click()
-    page.wait_for_timeout(200)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").select_option("3")
-    page.wait_for_timeout(200)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").click()
-    page.wait_for_timeout(200)
-    # Select CODE_TS
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField1\"]").select_option("CODE_TS")
-    page.wait_for_timeout(200)
-    # Click input[name="outerValue1"]
-    page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").click()
-    page.wait_for_timeout(200)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField2\"]").select_option("ORIGIN_COUNTRY")
-    page.wait_for_timeout(200)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField2\"]").click()
-    # Select TRADE_MODE
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField3\"]").select_option("TRADE_MODE")
-    page.wait_for_timeout(200)
-    # Select TRADE_CO_PORT
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField3\"]").click()
-    page.wait_for_timeout(200)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField4\"]").select_option("TRADE_CO_PORT")
-    # Fill input[name="outerValue1"]
-    page.wait_for_timeout(200)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField4\"]").click()
-    page.wait_for_timeout(200)
-    page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").fill(f"{key}")
-    page.wait_for_timeout(300)
-    # Click text=查询
-    page.frame_locator("iframe").nth(1).locator("text=查询").click()
-    page.wait_for_timeout(300)
-    # Click text=确定
-    page.frame_locator("iframe").nth(1).locator("text=确定").click()
-    page.wait_for_timeout(2000)
-    page.screenshot(path='page.png', full_page=True)
-    print('=== screenshot page ==')
-    # image_action('page.png')
-    time.sleep(1)
-    # mouse_action(mark_edge('1.jpg'))
-    # Close page
-    page.wait_for_timeout(300)
-    page.frame_locator("iframe").first.frame_locator("iframe[name=\"layui-layer-iframe2\"]").locator(
-        "text=确定").click()
+browser = playwright.webkit.launch(headless=False, slow_mo=100) # or firefox, webkit
+page = browser.new_page()
+page.goto('http://43.248.49.97/')
+page.wait_for_timeout(5000)
 
-    page.wait_for_timeout(500)
-    page.close()
-
-    # ---------------------
-    context.close()
-    browser.close()
-
-
-
+browser.close()
+playwright.stop()'''
 
 # with sync_playwright() as playwright:
 #     run(playwright, '04063000')
