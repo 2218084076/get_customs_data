@@ -97,11 +97,6 @@ def browser_action(file_path: str, year: str, start_month: str, end_month: str) 
             "text=确定").click()
         page.wait_for_timeout(200)
 
-        page.inner_text(selector='')
-        # Click text=返回设置
-        result_json={
-            'id':key,
-        }
         page.frame_locator("iframe").nth(1).locator("text=返回设置").click()
         page.wait_for_timeout(500)
         page.close()
