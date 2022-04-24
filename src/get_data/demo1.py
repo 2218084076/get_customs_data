@@ -83,9 +83,9 @@ def run(playwright: Playwright, key: str) -> None:
     page.wait_for_timeout(2000)
     page.screenshot(path='page.png', full_page=True)
     print('=== screenshot page ==')
-    image_action('page.png')
+    # image_action('page.png')
     time.sleep(1)
-    mouse_action(mark_edge('1.jpg'))
+    # mouse_action(mark_edge('1.jpg'))
     # Close page
     page.wait_for_timeout(300)
     page.frame_locator("iframe").first.frame_locator("iframe[name=\"layui-layer-iframe2\"]").locator(
@@ -97,6 +97,8 @@ def run(playwright: Playwright, key: str) -> None:
     # ---------------------
     context.close()
     browser.close()
+
+
 
 
 # with sync_playwright() as playwright:

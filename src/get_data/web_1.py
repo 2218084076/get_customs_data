@@ -2,7 +2,7 @@ from playwright.sync_api import Playwright, sync_playwright, expect
 
 
 def run(playwright: Playwright) -> None:
-    browser = playwright.firefox.launch(headless=False)
+    browser = playwright.webkit.launch(headless=False)
     context = browser.new_context()
 
     # Open new page
@@ -13,24 +13,17 @@ def run(playwright: Playwright) -> None:
 
     # 0× click
     page.locator("html").click()
-    page.wait_for_timeout(1000)
-    # Select 3
-    page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").select_option("3")
-    page.wait_for_timeout(1000)
-    # Select CODE_TS
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField1\"]").select_option("CODE_TS")
-    page.wait_for_timeout(1000)
-    # Click input[name="outerValue1"]
-    page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").click()
 
-    # Fill input[name="outerValue1"]
-    page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").fill("04063000")
+    # Click body
+    page.frame_locator("iframe").locator("body").click()
 
-    # Click text=查询
-    page.frame_locator("iframe").nth(1).locator("text=查询").click()
+    # Click a:has-text("导出数据")
+    page.frame_locator("iframe").nth(1).locator("a:has-text(\"导出数据\")").click()
 
     # Click text=确定
-    page.frame_locator("iframe").nth(1).locator("text=确定").click()
+    with page.expect_download() as download_info:
+        page.frame_locator("iframe").nth(1).locator("text=确定").click()
+    download = download_info.value
 
     # Close page
     page.close()
