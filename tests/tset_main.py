@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from get_data.main import read_csv, mouse_action, mark_edge, crop_image
+# from get_data.main import read_csv, mouse_action, mark_edge, crop_image
 
 import pandas as pd
 
