@@ -28,7 +28,7 @@ def read_csv(file_path: str) -> list:
     for n in data.values.tolist():
         if len(str(n[0])) == 8:
             id_list.append(n[0])
-    logging.debug('- return id list -')
+    logging.debug('return id list ')
     return id_list
 
 
