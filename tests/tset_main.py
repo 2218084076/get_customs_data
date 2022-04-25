@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-# from get_data.main import read_csv, mouse_action, mark_edge, crop_image
+from get_data.main import read_csv
 
 import pandas as pd
 
@@ -16,3 +16,12 @@ def fixture_mock_source_file(mock_path) -> Path:
     dataframe.to_csv('%s/test_file.csv' % mock_path, index=False, sep=',')
     yield source_file
 
+
+def test_read_csv(mock_source_file):
+    """Test read csv file"""
+    result = read_csv(mock_source_file)
+    assert result == [90214000, 90219011]
+
+def test_crop_image():
+    image_path = './get_data/page.png'
+     

@@ -3,7 +3,7 @@
 import logging
 import random
 import time
-
+from pathlib import Path
 import cv2
 import numpy as np
 import pandas as pd
@@ -16,7 +16,7 @@ logging.basicConfig(
 )
 
 
-def read_csv(file_path: str) -> list:
+def read_csv(file_path: Path) -> list:
     """
     read csv file return list
     :param: csv file path
@@ -174,4 +174,4 @@ def download(page):
 # id_list = read_csv('商品参数导出.csv')
 # print(id_list)
 # for d in id_list:
-browser_action('商品参数导出.csv', '2021', '1', '3')
+# browser_action('商品参数导出.csv', '2021', '1', '3')
