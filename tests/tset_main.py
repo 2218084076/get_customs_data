@@ -27,4 +27,3 @@ def test_crop_image():
     image_path = './get_data/page.png'
     crop_image(image_path)
     size = cv2.imread('./get_data/1.jpg').shape
-    assert size[] ==

@@ -174,4 +174,4 @@ def download(page):
 # id_list = read_csv('商品参数导出.csv')
 # print(id_list)
 # for d in id_list:
-# browser_action('商品参数导出.csv', '2021', '1', '3')
+browser_action('商品参数导出.csv', '2021', '1', '3')
