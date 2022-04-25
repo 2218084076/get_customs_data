@@ -2,10 +2,11 @@ from pathlib import Path
 
 import pytest
 
-from get_data.main import read_csv
+from get_data.main import read_csv,crop_image
 
 import pandas as pd
 
+import cv2
 
 @pytest.fixture(name='mock_source_file')
 def fixture_mock_source_file(mock_path) -> Path:
@@ -24,4 +25,6 @@ def test_read_csv(mock_source_file):
 
 def test_crop_image():
     image_path = './get_data/page.png'
-     
+    crop_image(image_path)
+    size = cv2.imread('./get_data/1.jpg').shape
+    assert size[] ==
