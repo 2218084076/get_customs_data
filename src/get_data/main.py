@@ -1,14 +1,14 @@
 # coding=utf-8
-
+import asyncio
 import logging
 import random
 import time
 from pathlib import Path
+from playwright.async_api import async_playwright
 import cv2
 import numpy as np
 import pandas as pd
 import pyautogui
-from playwright.sync_api import sync_playwright
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -32,7 +32,7 @@ def read_csv(file_path: Path) -> list:
     return id_list
 
 
-def browser_action(file_path: str, year: str, start_month: str, end_month: str) -> None:
+async def main(file_path: str, year: str, start_month: str, end_month: str) -> None:
     """
     browser action
     :param file_path:
@@ -40,70 +40,71 @@ def browser_action(file_path: str, year: str, start_month: str, end_month: str) 
     :param start_month:
     :param end_month:
     """
-    playwright = sync_playwright().start()
-    browser = playwright.webkit.launch(headless=False)
-    page = browser.new_page()
-    # Go to http://43.248.49.97/
-    page.goto("http://43.248.49.97/")
-    pyautogui.hotkey('win', 'up')
-    page.wait_for_timeout(1000)
-    for key in read_csv(file_path):
-        logging.debug('find %s' % key)
-        page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").select_option(year)
-        page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").click()
-        page.wait_for_timeout(100)
-        # Select start month
-        page.frame_locator("iframe").nth(1).locator("select[name=\"startMonth\"]").select_option(start_month)
-        page.frame_locator("iframe").nth(1).locator("select[name=\"startMonth\"]").click()
-        page.wait_for_timeout(100)
-        # Select end month
-        page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").select_option(end_month)
-        page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").click()
-        page.wait_for_timeout(100)
-        # Select CODE_TS
-        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField1\"]").select_option("CODE_TS")
-        page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").click()
-        page.wait_for_timeout(100)
-        # Select ORIGIN_COUNTRY
-        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField2\"]").select_option("ORIGIN_COUNTRY")
-        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField2\"]").click()
-        page.wait_for_timeout(100)
-        # Select TRADE_MODE
-        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField3\"]").select_option("TRADE_MODE")
-        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField3\"]").click()
-        # Select TRADE_CO_PORT
-        page.wait_for_timeout(100)
-        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField4\"]").select_option("TRADE_CO_PORT")
-        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField4\"]").click()
-        page.wait_for_timeout(100)
-        # input keywords
-        page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").fill(f"{key}")
-        page.wait_for_timeout(100)
-        # Click text=查询
-        page.frame_locator("iframe").nth(1).locator("text=查询").click()
-        page.wait_for_timeout(300)
-        # Click text=确定
-        page.frame_locator("iframe").nth(1).locator("text=确定").click()
-        page.wait_for_timeout(2000)
-        for i in range(3):
-            page.screenshot(path='page.png', full_page=True)
-            page.wait_for_timeout(2000)
-            crop_image('page.png')
-            time.sleep(0.5)
-            mouse_action(mark_edge('1.jpg'))
-        # Close page
-        page.wait_for_timeout(300)
-        # Click text=确定
-        page.frame_locator("iframe").nth(1).frame_locator("iframe[name=\"layui-layer-iframe2\"]").locator(
-            "text=确定").click()
-        page.wait_for_timeout(200)
-        download(page)
-        page.frame_locator("iframe").nth(1).locator("text=返回设置").click()
-        page.wait_for_timeout(500)
-        page.close()
-    logging.debug('playwright stop')
-    browser.close()
-    playwright.stop()
+    async with async_playwright() as p:
+        browser = await p.webkit.launch(headless=False)
+        page = await browser.new_page()
+        # Go to http://43.248.49.97/
+        await page.goto("http://43.248.49.97/")
+        title = await page.title()
+        pyautogui.hotkey('win', 'up')
+        logging.debug('page title: %s' % title)
+        await page.wait_for_timeout(1000)
+        for key in read_csv(Path(file_path)):
+            logging.debug('find %s' % key)
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").select_option(year)
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").click()
+            await page.wait_for_timeout(100)
+            # Select start month
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"startMonth\"]").select_option(start_month)
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"startMonth\"]").click()
+            await page.wait_for_timeout(100)
+            # Select end month
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").select_option(end_month)
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").click()
+            await page.wait_for_timeout(100)
+            # Select CODE_TS
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"outerField1\"]").select_option("CODE_TS")
+            await page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").click()
+            await page.wait_for_timeout(100)
+            # Select ORIGIN_COUNTRY
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"outerField2\"]").select_option(
+                "ORIGIN_COUNTRY")
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"outerField2\"]").click()
+            await page.wait_for_timeout(100)
+            # Select TRADE_MODE
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"outerField3\"]").select_option(
+                "TRADE_MODE")
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"outerField3\"]").click()
+            # Select TRADE_CO_PORT
+            await page.wait_for_timeout(100)
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"outerField4\"]").select_option(
+                "TRADE_CO_PORT")
+            await page.frame_locator("iframe").nth(1).locator("select[name=\"outerField4\"]").click()
+            await page.wait_for_timeout(100)
+            # input keywords
+            await page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").fill(f"{key}")
+            await page.wait_for_timeout(100)
+            # Click text=查询
+            await page.frame_locator("iframe").nth(1).locator("text=查询").click()
+            await page.wait_for_timeout(300)
+            # Click text=确定
+            await page.frame_locator("iframe").nth(1).locator("text=确定").click()
+            await page.wait_for_timeout(2000)
+            msg_element = page.locator('#msg')
+            msg_value = await msg_element.input_value()
+            logging.debug('#msg: %s' % msg_value)
+            # Close page
+            await page.wait_for_timeout(300)
+            # Click text=确定
+            await page.frame_locator("iframe").nth(1).frame_locator("iframe[name=\"layui-layer-iframe2\"]").locator(
+                "text=确定").click()
+            await page.wait_for_timeout(200)
+            download(page)
+            await page.frame_locator("iframe").nth(1).locator("text=返回设置").click()
+            await page.wait_for_timeout(500)
+            await page.close()
+        logging.debug('playwright stop')
+        await browser.close()
 
 
 def mouse_action(x: int):
@@ -174,4 +175,4 @@ def download(page):
 # id_list = read_csv('商品参数导出.csv')
 # print(id_list)
 # for d in id_list:
-browser_action('商品参数导出.csv', '2021', '1', '3')
+asyncio.run(main('商品参数导出.csv', '2021', '1', '3'))
