@@ -1,0 +1,1622 @@
+[
+  {
+    "id": "10011100",
+    "product_name": "种用硬粒小麦",
+    "first_q": "303",
+    "first_n": "英国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "32"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "15",
+    "second_n": "进料加工贸易",
+    "rmb": "23"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "429",
+    "first_n": "墨西哥",
+    "second_q": "39",
+    "second_n": "其他",
+    "rmb": "44"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "12"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "13"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "21"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "23"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "31"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "32"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "34"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "35"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "37"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "41"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "43"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "15",
+    "second_n": "进料加工贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "15",
+    "second_n": "进料加工贸易",
+    "rmb": "46"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "37"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "15",
+    "second_n": "进料加工贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "31"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "32"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "35"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "37"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "41"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "43"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "51"
+  },
+  {
+    "id": "10011900",
+    "product_name": "其他硬粒小麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "15",
+    "second_n": "进料加工贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10019100",
+    "product_name": "种用其他小麦及混合麦",
+    "first_q": "303",
+    "first_n": "英国",
+    "second_q": "39",
+    "second_n": "其他",
+    "rmb": "32"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "145",
+    "first_n": "哈萨克斯坦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "145",
+    "first_n": "哈萨克斯坦",
+    "second_q": "15",
+    "second_n": "进料加工贸易",
+    "rmb": "65"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "145",
+    "first_n": "哈萨克斯坦",
+    "second_q": "34",
+    "second_n": "海关特殊监管区域物流货物",
+    "rmb": "65"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "33",
+    "second_n": "保税监管场所进出境货物",
+    "rmb": "11"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "336",
+    "first_n": "立陶宛",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "19",
+    "second_n": "边境小额贸易",
+    "rmb": "15"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "34",
+    "second_n": "海关特殊监管区域物流货物",
+    "rmb": "13"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "34",
+    "second_n": "海关特殊监管区域物流货物",
+    "rmb": "23"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "429",
+    "first_n": "墨西哥",
+    "second_q": "39",
+    "second_n": "其他",
+    "rmb": "44"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "32"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "15",
+    "second_n": "进料加工贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "39",
+    "second_n": "其他",
+    "rmb": "11"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "31"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "32"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "37"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "43"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "15",
+    "second_n": "进料加工贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10019900",
+    "product_name": "其他小麦及混合麦，种...",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "15",
+    "second_n": "进料加工贸易",
+    "rmb": "46"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "145",
+    "first_n": "哈萨克斯坦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "31"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "145",
+    "first_n": "哈萨克斯坦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "33"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "145",
+    "first_n": "哈萨克斯坦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "35"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "145",
+    "first_n": "哈萨克斯坦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "145",
+    "first_n": "哈萨克斯坦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "61"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "145",
+    "first_n": "哈萨克斯坦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "62"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "145",
+    "first_n": "哈萨克斯坦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "65"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "145",
+    "first_n": "哈萨克斯坦",
+    "second_q": "34",
+    "second_n": "海关特殊监管区域物流货物",
+    "rmb": "65"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "302",
+    "first_n": "丹麦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "13"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "302",
+    "first_n": "丹麦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "21"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "302",
+    "first_n": "丹麦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "32"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "302",
+    "first_n": "丹麦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "33"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "302",
+    "first_n": "丹麦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "13"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "21"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "31"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "32"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "33"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "34"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "35"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "36"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "37"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "33",
+    "second_n": "保税监管场所进出境货物",
+    "rmb": "32"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "33",
+    "second_n": "保税监管场所进出境货物",
+    "rmb": "35"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "305",
+    "first_n": "法国",
+    "second_q": "33",
+    "second_n": "保税监管场所进出境货物",
+    "rmb": "44"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "12"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "23"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "31"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "35"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "42"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "50"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "51"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "65"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "19",
+    "second_n": "边境小额贸易",
+    "rmb": "15"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "19",
+    "second_n": "边境小额贸易",
+    "rmb": "23"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "12"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "31"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "32"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "33"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "35"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "36"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "37"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "41"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "42"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "46"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "51"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "62"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "347",
+    "first_n": "乌克兰",
+    "second_q": "33",
+    "second_n": "保税监管场所进出境货物",
+    "rmb": "44"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "402",
+    "first_n": "阿根廷",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "402",
+    "first_n": "阿根廷",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "12"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "402",
+    "first_n": "阿根廷",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "13"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "402",
+    "first_n": "阿根廷",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "21"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "402",
+    "first_n": "阿根廷",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "32"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "402",
+    "first_n": "阿根廷",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "33"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "402",
+    "first_n": "阿根廷",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "35"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "402",
+    "first_n": "阿根廷",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "37"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "402",
+    "first_n": "阿根廷",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "402",
+    "first_n": "阿根廷",
+    "second_q": "33",
+    "second_n": "保税监管场所进出境货物",
+    "rmb": "44"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "444",
+    "first_n": "乌拉圭",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "13"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "444",
+    "first_n": "乌拉圭",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "21"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "444",
+    "first_n": "乌拉圭",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "32"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "444",
+    "first_n": "乌拉圭",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "33"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "444",
+    "first_n": "乌拉圭",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "35"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "444",
+    "first_n": "乌拉圭",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "41"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "444",
+    "first_n": "乌拉圭",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "13"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "21"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "31"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "32"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "33"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "34"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "35"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "37"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "46"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "50"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "15",
+    "second_n": "进料加工贸易",
+    "rmb": "21"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "33",
+    "second_n": "保税监管场所进出境货物",
+    "rmb": "32"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "33",
+    "second_n": "保税监管场所进出境货物",
+    "rmb": "35"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "33",
+    "second_n": "保税监管场所进出境货物",
+    "rmb": "44"
+  },
+  {
+    "id": "10039000",
+    "product_name": "其他大麦",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "31"
+  },
+  {
+    "id": "10041000",
+    "product_name": "种用燕麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10041000",
+    "product_name": "种用燕麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "62"
+  },
+  {
+    "id": "10041000",
+    "product_name": "种用燕麦",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10041000",
+    "product_name": "种用燕麦",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "62"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "110",
+    "first_n": "中国香港",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "122",
+    "first_n": "马来西亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "143",
+    "first_n": "中国台湾",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "143",
+    "first_n": "中国台湾",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "12"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "304",
+    "first_n": "德国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "42"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "304",
+    "first_n": "德国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "318",
+    "first_n": "芬兰",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "15"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "23"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "31"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "43"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "62"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "63"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "19",
+    "second_n": "边境小额贸易",
+    "rmb": "15"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "344",
+    "first_n": "俄罗斯联邦",
+    "second_q": "19",
+    "second_n": "边境小额贸易",
+    "rmb": "23"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "501",
+    "first_n": "加拿大",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "34"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "502",
+    "first_n": "美国",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "12"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "11"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "13"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "15"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "21"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "23"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "31"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "32"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "33"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "34"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "43"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "44"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "45"
+  },
+  {
+    "id": "10049000",
+    "product_name": "其他燕麦",
+    "first_q": "601",
+    "first_n": "澳大利亚",
+    "second_q": "10",
+    "second_n": "一般贸易",
+    "rmb": "62"
+  }
+]
