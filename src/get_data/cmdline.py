@@ -1,8 +1,14 @@
 """Cmdline"""
 import argparse
+import logging
 import sys
-
+import threading
+import time
 from get_data.get_data import main_action
+
+curTime = time.strftime("%Y-%M-%D", time.localtime())  # 记录当前时间
+execF = False
+ncount = 0
 
 
 def init_args() -> argparse.Namespace:
@@ -22,5 +28,25 @@ def main():
     main_action(args.csv_file_path, args.year, args.start_month, args.end_month, args.dest_file)
 
 
+def timer_task():
+    global execF
+    global curTime
+    global ncount
+    logging.debug('timer task %s ' % curTime)
+    if execF is False:
+        main()
+        execF = True
+    else:
+        destime = time.strftime("%Y-%M-%D", time.localtime())
+        if destime > curTime:
+            execF = False
+            curTime = destime
+    ncount += 1
+    timer = threading.Timer(5, timer_task)
+    timer.start()
+    logging.debug('number of executions: %s' % ncount)
+
+
 if __name__ == '__main__':
-    main()
+    timer = threading.Timer(5, timer_task)
+    timer.start()
