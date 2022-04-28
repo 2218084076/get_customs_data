@@ -1,14 +1,11 @@
 # coding=utf-8
+import json
 import logging
 import random
-
 from pathlib import Path
 
 import pandas as pd
-
 from playwright.sync_api import sync_playwright
-
-import json
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -34,7 +31,7 @@ def read_csv(file_path: Path) -> list:
     return id_list
 
 
-def main(file_path: str, year: str, start_month: str, end_month: str, result_json_path: str) -> None:
+def main_action(file_path: str, year: str, start_month: str, end_month: str, result_json_path: Path) -> None:
     """
     browser action
     :param file_path:
@@ -56,7 +53,55 @@ def main(file_path: str, year: str, start_month: str, end_month: str, result_jso
 
     for key in id_list:
         logging.debug('find %s' % key)
-        browser_action(page, year, start_month, end_month, key)
+        page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").select_option(year)
+        page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").click()
+        page.wait_for_timeout(random.randint(100, 200))
+        # Select start month
+        page.frame_locator("iframe").nth(1).locator("select[name=\"startMonth\"]").select_option(start_month)
+        page.frame_locator("iframe").nth(1).locator("select[name=\"startMonth\"]").click()
+        page.wait_for_timeout(random.randint(100, 200))
+        # Select end month
+        page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").select_option(end_month)
+        page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").click()
+        page.wait_for_timeout(random.randint(100, 200))
+        # Select CODE_TS
+        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField1\"]").select_option("CODE_TS")
+        page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").click()
+        page.wait_for_timeout(100)
+        # Select ORIGIN_COUNTRY
+        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField2\"]").select_option(
+            "ORIGIN_COUNTRY")
+        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField2\"]").click()
+        page.wait_for_timeout(100)
+        # Select TRADE_MODE
+        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField3\"]").select_option(
+            "TRADE_MODE")
+        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField3\"]").click()
+        # Select TRADE_CO_PORT
+        page.wait_for_timeout(100)
+        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField4\"]").select_option(
+            "TRADE_CO_PORT")
+        page.frame_locator("iframe").nth(1).locator("select[name=\"outerField4\"]").click()
+        page.wait_for_timeout(100)
+        # input keywords
+        page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").fill(f"{key}")
+        page.wait_for_timeout(100)
+        # Click text=查询
+        page.frame_locator("iframe").nth(1).locator("text=查询").click()
+        page.wait_for_timeout(300)
+        # Click text=确定
+        page.frame_locator("iframe").nth(1).locator("text=确定").click()
+        page.wait_for_timeout(200)
+        page.frame_locator("iframe").nth(1).frame_locator("iframe[name=\"layui-layer-iframe2\"]").locator(
+            "text=确定").click()
+        page.frame_locator('iframe').nth(1).frame_locator('iframe').locator('#msg').evaluate(
+            'document.getElementById("msg").value="1"')
+        msg = page.frame_locator('iframe').nth(1).frame_locator('iframe').locator('#msg').evaluate(
+            'document.getElementById("msg").value')
+        logging.debug('msg_value: %s' % msg)
+        # click 确定
+        page.frame_locator('iframe').nth(1).frame_locator('iframe').locator('#doSearch').click()
+        page.wait_for_timeout(100)
         page_size = page.frame_locator("iframe").nth(1).locator('.c-666').nth(0).inner_text()
         page_num = int(page_size.split('共查询到')[1].split('条数据')[0])
 
@@ -172,66 +217,6 @@ get_info = function() {
     page.close()
     logging.debug('playwright stop')
     browser.close()
-
-
-def browser_action(page, year: str, start_month: str, end_month: str, key):
-    """
-    Browser click action
-    :param page:
-    :param year:
-    :param start_month:
-    :param end_month:
-    :param key:
-    """
-    page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").select_option(year)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"year\"]").click()
-    page.wait_for_timeout(random.randint(100, 200))
-    # Select start month
-    page.frame_locator("iframe").nth(1).locator("select[name=\"startMonth\"]").select_option(start_month)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"startMonth\"]").click()
-    page.wait_for_timeout(random.randint(100, 200))
-    # Select end month
-    page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").select_option(end_month)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"endMonth\"]").click()
-    page.wait_for_timeout(random.randint(100, 200))
-    # Select CODE_TS
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField1\"]").select_option("CODE_TS")
-    page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").click()
-    page.wait_for_timeout(100)
-    # Select ORIGIN_COUNTRY
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField2\"]").select_option(
-        "ORIGIN_COUNTRY")
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField2\"]").click()
-    page.wait_for_timeout(100)
-    # Select TRADE_MODE
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField3\"]").select_option(
-        "TRADE_MODE")
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField3\"]").click()
-    # Select TRADE_CO_PORT
-    page.wait_for_timeout(100)
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField4\"]").select_option(
-        "TRADE_CO_PORT")
-    page.frame_locator("iframe").nth(1).locator("select[name=\"outerField4\"]").click()
-    page.wait_for_timeout(100)
-    # input keywords
-    page.frame_locator("iframe").nth(1).locator("input[name=\"outerValue1\"]").fill(f"{key}")
-    page.wait_for_timeout(100)
-    # Click text=查询
-    page.frame_locator("iframe").nth(1).locator("text=查询").click()
-    page.wait_for_timeout(300)
-    # Click text=确定
-    page.frame_locator("iframe").nth(1).locator("text=确定").click()
-    page.wait_for_timeout(200)
-    page.frame_locator("iframe").nth(1).frame_locator("iframe[name=\"layui-layer-iframe2\"]").locator(
-        "text=确定").click()
-    page.frame_locator('iframe').nth(1).frame_locator('iframe').locator('#msg').evaluate(
-        'document.getElementById("msg").value="1"')
-    msg = page.frame_locator('iframe').nth(1).frame_locator('iframe').locator('#msg').evaluate(
-        'document.getElementById("msg").value')
-    logging.debug('msg_value: %s' % msg)
-    # click 确定
-    page.frame_locator('iframe').nth(1).frame_locator('iframe').locator('#doSearch').click()
-    page.wait_for_timeout(100)
 
 
 def save_json(content_json: list, result_json_path: Path):

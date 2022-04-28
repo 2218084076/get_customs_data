@@ -1,3 +1,3 @@
 from playwright.sync_api import sync_playwright
-from main import browser_action
 
+from get_data import browser_action

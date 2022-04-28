@@ -1,12 +1,13 @@
 import logging
+import random
 import re
 import time
-import random
-from playwright.sync_api import Playwright, sync_playwright, expect
-import pandas as pd
-import pyautogui
+
 import cv2
 import numpy as np
+import pandas as pd
+import pyautogui
+from playwright.sync_api import Playwright, expect, sync_playwright
 
 
 def mark_edge(image_path: str):

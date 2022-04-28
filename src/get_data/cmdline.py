@@ -1,14 +1,14 @@
 """Cmdline"""
-from get_data.main import browser_action, read_csv
-
 import argparse
 import sys
+
+from get_data.get_data import main_action
 
 
 def init_args() -> argparse.Namespace:
     """Init argument and parse"""
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f', '--csv file path', required=True, help='To query the target file (product ID CSV file)')
+    parser.add_argument('-f', '--csv_file_path', required=True, help='To query the target file (product ID CSV file)')
     parser.add_argument('-y', '--year', required=True, help='Year to query.')
     parser.add_argument('-s', '--start_month', required=True, help='start month')
     parser.add_argument('-e', '--end_month', required=True, help='End month')
@@ -19,7 +19,7 @@ def init_args() -> argparse.Namespace:
 def main():
     """Execute"""
     args = init_args()
-    browser_action(args.product_id, args.year, args.start_month, args.end_month, args.dest_file)
+    main_action(args.csv_file_path, args.year, args.start_month, args.end_month, args.dest_file)
 
 
 if __name__ == '__main__':

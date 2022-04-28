@@ -3,6 +3,7 @@ import time
 
 from pyppeteer import launch
 
+
 # 测试检测webdriver
 async def main():
     browser = await launch(headless=False,contentType='application')

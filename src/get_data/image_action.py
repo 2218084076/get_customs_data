@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 
+
 def image_action(image_path: str):
     img = cv2.imread(image_path)
     cv2.imshow('original', img)

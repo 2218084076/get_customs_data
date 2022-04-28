@@ -1,9 +1,9 @@
 import time
-import numpy as np
-import cv2
-from playwright.sync_api import Playwright, sync_playwright, expect
 
+import cv2
+import numpy as np
 import pyautogui
+from playwright.sync_api import Playwright, expect, sync_playwright
 
 
 def mark_edge(image_path: str):

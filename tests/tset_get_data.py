@@ -1,11 +1,10 @@
 import json
-
 from pathlib import Path
 
 import pandas as pd
 import pytest
 
-from get_data.main import read_csv, save_json, main
+from get_data.get_data import main_action, read_csv, save_json
 
 
 @pytest.fixture(name='mock_source_file')
@@ -48,12 +47,14 @@ def test_main(mock, mock_path, mock_source_file):
     """test main"""
     mock_read_csv = mock.patch(
         'get_data.main.read_csv',
-        return_value=[90214000, 90219011]
+        return_value=[10019100]
     )
     mock_save_json = mock.patch(
         'get_data.main.save_json',
     )
-    dest_file = mock_path / 'result_data_json.json'
-    main(str(mock_source_file), '2021', '1', '12', dest_file)
+    dest_json = [{'id': '10019100', 'product_name': '种用其他小麦及混合麦', 'first_q': '303', 'first_n': '英国', 'second_q': '39',
+                 'second_n': '其他', 'rmb': '32'}]
+
+    main_action(str(mock_source_file), '2021', '1', '12', mock_path)
     mock_read_csv.assert_called_once_with(mock_source_file)
-    mock_save_json.assert_called_once_with(dest_file)
+    mock_save_json.assert_called_once_with(mock_path, dest_json)
