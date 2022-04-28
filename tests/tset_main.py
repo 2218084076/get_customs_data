@@ -48,6 +48,7 @@ def test_main(mock, mock_path, mock_source_file):
     """test main"""
     mock_read_csv = mock.patch(
         'get_data.main.read_csv',
+        return_value=[90214000, 90219011]
     )
     mock_save_json = mock.patch(
         'get_data.main.save_json',

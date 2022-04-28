@@ -12,13 +12,14 @@ def init_args() -> argparse.Namespace:
     parser.add_argument('-y', '--year', required=True, help='Year to query.')
     parser.add_argument('-s', '--start_month', required=True, help='start month')
     parser.add_argument('-e', '--end_month', required=True, help='End month')
+    parser.add_argument('-d', '--dest_file', required=True, help='destination file path')
     return parser.parse_args(sys.argv[1:])
 
 
 def main():
     """Execute"""
     args = init_args()
-    browser_action(args.product_id, args.year, args.start_month, args.end_month)
+    browser_action(args.product_id, args.year, args.start_month, args.end_month, args.dest_file)
 
 
 if __name__ == '__main__':
