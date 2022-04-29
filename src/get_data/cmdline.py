@@ -24,11 +24,8 @@ def main():
     main_action(args.csv_file_path, args.year, args.start_month, args.end_month, args.dest_file)
 
 
-def APschedulerMonitor():
-    scheduler = BlockingScheduler()
-    scheduler.add_job(main, 'interval', minutes=1, id='main_job')
-    scheduler.start()
+
 
 
 if __name__ == '__main__':
-    APschedulerMonitor()
+    main_action()

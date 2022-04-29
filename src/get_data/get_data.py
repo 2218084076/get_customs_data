@@ -186,29 +186,29 @@ get_info = function() {
 
             for p in range(page_num):
                 info = page.frame_locator("iframe").nth(1).locator('#table').evaluate(r'''
-get_info = function() {
-  var a, i, json, l, n, r_l, _i, _j, _len, _len1;
-  a = document.getElementsByClassName("mt-10")[%s];
-  l = a.getElementsByTagName("td");
-  r_l = [];
-  for (_i = 0, _len = l.length; _i < _len; _i++) {
-    i = l[_i];
-    r_l.push(i.innerText.replaceAll("\n", "").replaceAll("\t", ""));
-    for (_j = 0, _len1 = r_l.length; _j < _len1; _j++) {
-      n = r_l[_j];
-      json = {
-        'id': r_l[0],
-        'product_name': r_l[1],
-        'first_q': r_l[2],
-        'first_n': r_l[3],
-        'second_q': r_l[4],
-        'second_n': r_l[5],
-        'rmb': r_l[6]
-      };
-    }
-  }
-  return json;
-};
+    get_info = function() {
+      var a, i, json, l, n, r_l, _i, _j, _len, _len1;
+      a = document.getElementsByClassName("mt-10")[%s];
+      l = a.getElementsByTagName("td");
+      r_l = [];
+      for (_i = 0, _len = l.length; _i < _len; _i++) {
+        i = l[_i];
+        r_l.push(i.innerText.replaceAll("\n", "").replaceAll("\t", ""));
+        for (_j = 0, _len1 = r_l.length; _j < _len1; _j++) {
+          n = r_l[_j];
+          json = {
+            'id': r_l[0],
+            'product_name': r_l[1],
+            'first_q': r_l[2],
+            'first_n': r_l[3],
+            'second_q': r_l[4],
+            'second_n': r_l[5],
+            'rmb': r_l[6]
+          };
+        }
+      }
+      return json;
+    };
                 ''' % p)
                 result_json.append(info)
                 logging.debug("get info: %s" % info)
@@ -231,3 +231,5 @@ def save_json(content_json: list, result_json_path: Path):
     with open(result_json_path, 'w', encoding='utf-8') as file_obj:
         listarr2 = json.dumps(content_json, ensure_ascii=False)
         file_obj.write(listarr2)
+
+
