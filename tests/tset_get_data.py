@@ -43,18 +43,18 @@ def test_save_json(mock_path):
         assert '10011900' in j[0].get('id')
 
 
-def test_get_data(mock, mock_path, mock_source_file):
+def test_get_data(mocker, mock_path, mock_source_file):
     """test main"""
-    mock_read_csv = mock.patch(
-        'get_data.main.read_csv',
+    mock_read_csv = mocker.patch(
+        'get_data.get_data.read_csv',
         return_value=[10019100]
     )
-    mock_save_json = mock.patch(
-        'get_data.main.save_json',
+    mock_save_json = mocker.patch(
+        'get_data.get_data.save_json',\
     )
-    dest_json = [{'id': '10019100', 'product_name': '种用其他小麦及混合麦', 'first_q': '303', 'first_n': '英国', 'second_q': '39',
-                 'second_n': '其他', 'rmb': '32'}]
+    dest_json = [{"id": "10019100", "product_name": "种用其他小麦及混合麦", "first_q": "303", "first_n": "英国", "second_q": "39",
+                  "second_n": "其他", "rmb": "32"}]
 
     main_action(mock_source_file, '2021', '1', '12', mock_path)
     mock_read_csv.assert_called_once_with(mock_source_file)
-    mock_save_json.assert_called_once_with(mock_path, dest_json)
+    mock_save_json.assert_called_once_with(dest_json)

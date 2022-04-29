@@ -10,8 +10,12 @@ from get_data.cmdline import main
     '_help, csv_file_path, year, start_month, end_month, dest_file, raise_value, count_called',
     [
         ('-h', '', '', '', '', '', 0, False),
-
-        ('', 'f', '2021', '1', '3', 'b', None, True),  # Normal argument.
+        ('', 'f', '', '', '', '', 2, False),
+        ('', '', '2021', '', '', '', 2, False),
+        ('', '', '', '1', '', '', 2, False),
+        ('', '', '', '', '3', '', 2, False),
+        ('', '', '', '', '', 'b', 2, False),
+        ('', 'f', 2021, 1, 3, 'b', None, True),  # Normal argument.
 
     ]
 )

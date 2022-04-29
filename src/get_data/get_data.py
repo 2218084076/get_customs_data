@@ -4,6 +4,7 @@ import logging
 import random
 import time
 from pathlib import Path
+
 import pandas as pd
 from playwright.sync_api import sync_playwright
 
@@ -149,7 +150,7 @@ get_info = function() {
                 info = page.frame_locator("iframe").nth(1).locator('#table').evaluate(r'''
 get_info = function() {
   var a, i, l, result_json, result_list, _i, _len;
-  a = document.getElementsByClassName("text-c  mt-10")[%s];
+  a = document.getElementsByClassName("mt-10")[%s];
   l = a.getElementsByTagName("td");
   result_list = [];
   for (_i = 0, _len = l.length; _i < _len; _i++) {
@@ -187,7 +188,7 @@ get_info = function() {
                 info = page.frame_locator("iframe").nth(1).locator('#table').evaluate(r'''
     get_info = function() {
       var a, i, json, l, n, r_l, _i, _j, _len, _len1;
-      a = document.getElementsByClassName("text-c  mt-10")[%s];
+      a = document.getElementsByClassName("mt-10")[%s];
       l = a.getElementsByTagName("td");
       r_l = [];
       for (_i = 0, _len = l.length; _i < _len; _i++) {
@@ -213,7 +214,7 @@ get_info = function() {
                 logging.debug("get info: %s" % info)
         page.frame_locator("iframe").nth(1).locator('.btn-link').nth(0).click()
         page.wait_for_timeout(random.randint(200, 500))
-        save_json(result_json, Path(result_json_path + '%s_%s_%s%s.json' % (year, start_month, end_month, now_time)))
+        save_json(result_json, result_json_path / Path('%s_%s_%s%s.json' % (year, start_month, end_month, now_time)))
 
     page.wait_for_timeout(2000)
     page.close()
