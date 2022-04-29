@@ -1,9 +1,7 @@
 import json
 from pathlib import Path
-
 import pandas as pd
 import pytest
-
 from get_data.get_data import main_action, read_csv, save_json
 
 
@@ -50,7 +48,7 @@ def test_get_data(mocker, mock_path, mock_source_file):
         return_value=[10019100]
     )
     mock_save_json = mocker.patch(
-        'get_data.get_data.save_json',\
+        'get_data.get_data.save_json',
     )
     dest_json = [{"id": "10019100", "product_name": "种用其他小麦及混合麦", "first_q": "303", "first_n": "英国", "second_q": "39",
                   "second_n": "其他", "rmb": "32"}]
