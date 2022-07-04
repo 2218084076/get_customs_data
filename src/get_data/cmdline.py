@@ -2,8 +2,6 @@
 import argparse
 import sys
 
-from apscheduler.schedulers.blocking import BlockingScheduler
-
 from get_data.get_data import main_action
 
 
@@ -24,8 +22,5 @@ def main():
     main_action(args.csv_file_path, args.year, args.start_month, args.end_month, args.dest_file)
 
 
-
-
-
 if __name__ == '__main__':
-    main_action()
+    main()
