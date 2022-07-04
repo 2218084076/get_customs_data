@@ -1,19 +1,26 @@
-# get_data
+# Crawl Customs Data
 
-## Overview
-
-get data project
+## 抓取海关统计数据在线查询平台数据
 
 ## Usage
 
-    1. init project
-    
     ```
-    pipenv install
+    按照商品编码、年月日检索所需数据
+    检索过程中存在滑块验证码过程，中途使用js脚本进行绕过
+    最后将将获得到的商品数据存在本地json（需改进写入mongo）
     ```
 
-TODO
+## 返回结果的数据结构
 
-## Develop
+```json
+  {
+  "id": "10011900",
+  "product_name": "其他硬粒小麦",
+  "first_q": "501",
+  "first_n": "加拿大",
+  "second_q": "10",
+  "second_n": "一般贸易",
+  "rmb": "11"
+},
+```
 
-You may need to read the [develop document](./docs/development.md) to use SRC Layout in your IDE.
